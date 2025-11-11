@@ -1,8 +1,9 @@
 import os
 import uuid
-import subprocess
 import zipfile
+import subprocess
 from flask_cors import CORS
+from collections import deque
 from flask import Flask, Response, request, jsonify, send_file, abort
 
 app = Flask(__name__) # Flask constructor.
@@ -37,8 +38,10 @@ def run_script():
         pdb_file.save(pdb_path)
         print(f"[IIME] Saved {pdb_path}")
 
+        container_name = f"iime_{job_id}"
+
         docker_cmd = [
-            "docker", "run", "--rm",
+            "docker", "run", "--name", container_name,
             "-v", f"{BASE_DIR}:/IIME",
             "-w", "/IIME",
             "iime_env_full",
@@ -59,7 +62,7 @@ def run_script():
         if mutations:
             docker_cmd += ["--mutations", mutations]
         elif detect_interface:
-            docker_cmd += ["--detect-interface"]
+            docker_cmd += ["--cutoff", "5.0"]
 
         subprocess.Popen(docker_cmd, cwd=BASE_DIR)
         return jsonify({"status": "processing", "job_id": job_id})
@@ -107,6 +110,21 @@ def get_file(job_id, filename):
             return send_file(file_path, as_attachment=True)
 
     abort(404, description=f"File not found: {filename}")
+
+@app.route('/get-log/<job_id>', methods=['GET'])
+def get_log(job_id):
+    container_name = f"iime_{job_id}"
+    try:
+        result = subprocess.run(
+            ["docker", "logs", "--tail", "10", container_name],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=5
+        )
+        return jsonify({"log": result.stdout}), 200
+    except subprocess.CalledProcessError:
+        return jsonify({"log": "[Container finished or not found]"}), 200
 
 
 # Following code is run only when the script is executed, not when it’s imported as a module!
