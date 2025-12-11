@@ -1,0 +1,30 @@
+2025-10-14 21:18:37 | INFO     | root | ======================================================================
+2025-10-14 21:18:37 | INFO     | root | Run started: 2025-10-14 21:18:37
+2025-10-14 21:18:37 | INFO     | root | Working directory: /home/marko/PROJECTS/SMEHEC/smehec
+2025-10-14 21:18:37 | INFO     | root | Python: 3.12.2 (/home/marko/anaconda3/bin/python3)
+2025-10-14 21:18:37 | INFO     | root | System: Linux 6.14.0-111032-tuxedo (x86_64)
+2025-10-14 21:18:37 | INFO     | root | CPU count: 32
+2025-10-14 21:18:37 | INFO     | root | Input parameters:
+2025-10-14 21:18:37 | INFO     | root |   charmm_dir          : /home/marko/PROJECTS/SMEHEC/smehec/charmm_program/charmm/bin/charmm
+2025-10-14 21:18:37 | INFO     | root |   pdb                 : 1brs.pdb
+2025-10-14 21:18:37 | INFO     | root |   protein_chains      : C
+2025-10-14 21:18:37 | INFO     | root |   partner_chains      : F
+2025-10-14 21:18:37 | INFO     | root |   mutations           : ARGC59 GLUC60
+2025-10-14 21:18:37 | INFO     | root |   cutoff              : 3.0
+2025-10-14 21:18:37 | INFO     | root |   abnr                : 10
+2025-10-14 21:18:37 | INFO     | root |   cgenff              : None
+2025-10-14 21:18:37 | INFO     | root |   threads             : 1
+2025-10-14 21:18:37 | INFO     | root |   method              : both
+2025-10-14 21:18:37 | INFO     | root |   skip_ligprep        : False
+2025-10-14 21:18:37 | INFO     | root |   skip_heatmap        : False
+2025-10-14 21:18:37 | INFO     | root |   skip_cleanup        : False
+2025-10-14 21:18:37 | INFO     | root |   start_at            : prep
+2025-10-14 21:18:37 | INFO     | root |   stop_after          : done
+2025-10-14 21:18:37 | INFO     | root |   logfile             : runs/1brs_cli3.log
+2025-10-14 21:18:37 | INFO     | root |   verbose             : 1
+2025-10-14 21:18:37 | INFO     | root | ======================================================================
+2025-10-14 21:18:37 | INFO     | root | 2 mutations remain after terminal filtering (in-memory).
+2025-10-14 21:18:37 | INFO     | root | No CGENFF file (skipping ligand preparation).
+2025-10-14 21:18:37 | WARNING  | py.warnings | /home/marko/anaconda3/lib/python3.12/site-packages/Bio/PDB/PDBParser.py:384: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1542
+  warnings.warn(
+

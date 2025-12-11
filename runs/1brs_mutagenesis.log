@@ -1,0 +1,226 @@
+2025-10-14 20:51:39 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 20:51:39 | INFO     | STDOUT |        /‾\   SMEHeC: Swift Mutational Energy Heatmap Calculator
+2025-10-14 20:51:39 | INFO     | STDOUT |       | O |  Developed by S. Kralj
+2025-10-14 20:51:39 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics 
+2025-10-14 20:51:39 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 20:51:42 | INFO     | root | 2 mutations remain after terminal filtering (file).
+2025-10-14 20:51:42 | INFO     | root | No CGENFF file (skipping ligand preparation).
+2025-10-14 20:51:42 | WARNING  | py.warnings | /home/marko/anaconda3/lib/python3.12/site-packages/Bio/PDB/PDBParser.py:384: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1542
+  warnings.warn(
+
+2025-10-14 20:55:18 | ERROR    | root | Fatal error: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 424, in <module>
+    main()
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 420, in main
+    do_cleanup(str(pdb_path))
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 279, in do_cleanup
+    c.zip_files(); c.delete_files()
+    ^^^^^^^^^^^^^
+  File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/cleanup.py", line 14, in zip_files
+    if filename.startswith('joined') and filename.endswith('.pdb') or filename.startswith('norm', 'abs', 'inter_ener')]
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
+2025-10-14 21:01:14 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:01:14 | INFO     | STDOUT |        /‾\   SMEHeC: Swift Mutational Energy Heatmap Calculator
+2025-10-14 21:01:14 | INFO     | STDOUT |       | O |  Developed by S. Kralj
+2025-10-14 21:01:14 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics 
+2025-10-14 21:01:14 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:01:17 | INFO     | root | 0 mutations remain after terminal filtering (file).
+2025-10-14 21:01:17 | ERROR    | root | No mutations remain after terminal filtering. Exiting.
+2025-10-14 21:02:22 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:02:22 | INFO     | STDOUT |        /‾\   SMEHeC: Swift Mutational Energy Heatmap Calculator
+2025-10-14 21:02:22 | INFO     | STDOUT |       | O |  Developed by S. Kralj
+2025-10-14 21:02:22 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics 
+2025-10-14 21:02:22 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:02:25 | INFO     | root | 2 mutations remain after terminal filtering (file).
+2025-10-14 21:02:25 | INFO     | root | No CGENFF file (skipping ligand preparation).
+2025-10-14 21:02:25 | WARNING  | py.warnings | /home/marko/anaconda3/lib/python3.12/site-packages/Bio/PDB/PDBParser.py:384: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1542
+  warnings.warn(
+
+2025-10-14 21:02:27 | ERROR    | FATAL | Uncaught exception
+Traceback (most recent call last):
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 424, in <module>
+    main()
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 371, in main
+    do_step1(str(pdb_path), charmm_dir)
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 228, in do_step1
+    s1.step1_maker(); s1.run_step1()
+                      ^^^^^^^^^^^^^^
+  File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/step1.py", line 248, in run_step1
+    subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1201, in communicate
+    self.wait()
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-10-14 21:02:27 | ERROR    | STDERR | Traceback (most recent call last):
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 424, in <module>
+2025-10-14 21:02:27 | ERROR    | STDERR | main()
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 371, in main
+2025-10-14 21:02:27 | ERROR    | STDERR | do_step1(str(pdb_path), charmm_dir)
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 228, in do_step1
+2025-10-14 21:02:27 | ERROR    | STDERR | s1.step1_maker(); s1.run_step1()
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/step1.py", line 248, in run_step1
+2025-10-14 21:02:27 | ERROR    | STDERR | subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 550, in run
+2025-10-14 21:02:27 | ERROR    | STDERR | stdout, stderr = process.communicate(input, timeout=timeout)
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1201, in communicate
+2025-10-14 21:02:27 | ERROR    | STDERR | self.wait()
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+2025-10-14 21:02:27 | ERROR    | STDERR | return self._wait(timeout=timeout)
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+2025-10-14 21:02:27 | ERROR    | STDERR | (pid, sts) = self._try_wait(0)
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+2025-10-14 21:02:27 | ERROR    | STDERR | (pid, sts) = os.waitpid(self.pid, wait_flags)
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | ^
+2025-10-14 21:02:27 | ERROR    | STDERR | KeyboardInterrupt
+2025-10-14 21:02:43 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:02:43 | INFO     | STDOUT |        /‾\   SMEHeC: Swift Mutational Energy Heatmap Calculator
+2025-10-14 21:02:43 | INFO     | STDOUT |       | O |  Developed by S. Kralj
+2025-10-14 21:02:43 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics 
+2025-10-14 21:02:43 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:02:46 | INFO     | root | 0 mutations remain after terminal filtering (file).
+2025-10-14 21:02:46 | ERROR    | root | No mutations remain after terminal filtering. Exiting.

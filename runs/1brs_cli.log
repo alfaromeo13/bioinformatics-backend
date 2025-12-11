@@ -1,0 +1,11 @@
+2025-10-14 21:09:55 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:09:55 | INFO     | STDOUT |        /‾\   IIME: In silico Interface Mutagenesis Experiment tool
+2025-10-14 21:09:55 | INFO     | STDOUT |       | O |  Developed by M. Jukič, S. Kralj
+2025-10-14 21:09:55 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics
+2025-10-14 21:09:55 | INFO     | STDOUT |              UP FAMNIT- Jukič Laboratory for Cheminformatics
+2025-10-14 21:09:55 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:09:58 | INFO     | root | 2 mutations remain after terminal filtering (in-memory).
+2025-10-14 21:09:58 | INFO     | root | No CGENFF file (skipping ligand preparation).
+2025-10-14 21:09:58 | WARNING  | py.warnings | /home/marko/anaconda3/lib/python3.12/site-packages/Bio/PDB/PDBParser.py:384: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1542
+  warnings.warn(
+

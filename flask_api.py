@@ -41,7 +41,7 @@ def run_script():
         container_name = f"iime_{job_id}"
 
         docker_cmd = [
-            "docker", "run", "--name", container_name,
+            "docker", "run", "-d", "--rm", "--name", container_name,
             "-v", f"{BASE_DIR}:/IIME",
             "-w", "/IIME",
             "iime_env_full",

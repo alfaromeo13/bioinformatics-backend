@@ -1,0 +1,1489 @@
+2025-10-14 21:27:20 | INFO     | root | ======================================================================
+2025-10-14 21:27:20 | INFO     | root | Run started: 2025-10-14 21:27:20
+2025-10-14 21:27:20 | INFO     | root | Working directory: /home/marko/PROJECTS/SMEHEC/smehec
+2025-10-14 21:27:20 | INFO     | root | Python: 3.12.2 (/home/marko/anaconda3/bin/python3)
+2025-10-14 21:27:20 | INFO     | root | System: Linux 6.14.0-111032-tuxedo (x86_64)
+2025-10-14 21:27:20 | INFO     | root | CPU count: 32
+2025-10-14 21:27:20 | INFO     | root | Input parameters:
+2025-10-14 21:27:20 | INFO     | root |   charmm_dir          : /home/marko/PROJECTS/SMEHEC/smehec/charmm_program/charmm/bin/charmm
+2025-10-14 21:27:20 | INFO     | root |   pdb                 : 1brs.pdb
+2025-10-14 21:27:20 | INFO     | root |   protein_chains      : C
+2025-10-14 21:27:20 | INFO     | root |   partner_chains      : F
+2025-10-14 21:27:20 | INFO     | root |   mutations           : ARGC59 GLUC60
+2025-10-14 21:27:20 | INFO     | root |   cutoff              : 3.0
+2025-10-14 21:27:20 | INFO     | root |   abnr                : 10
+2025-10-14 21:27:20 | INFO     | root |   cgenff              : None
+2025-10-14 21:27:20 | INFO     | root |   threads             : 1
+2025-10-14 21:27:20 | INFO     | root |   method              : both
+2025-10-14 21:27:20 | INFO     | root |   skip_ligprep        : False
+2025-10-14 21:27:20 | INFO     | root |   skip_heatmap        : False
+2025-10-14 21:27:20 | INFO     | root |   skip_cleanup        : False
+2025-10-14 21:27:20 | INFO     | root |   start_at            : prep
+2025-10-14 21:27:20 | INFO     | root |   stop_after          : done
+2025-10-14 21:27:20 | INFO     | root |   logfile             : runs/1brs_cli4.log
+2025-10-14 21:27:20 | INFO     | root |   verbose             : 1
+2025-10-14 21:27:20 | INFO     | root | ======================================================================
+2025-10-14 21:27:20 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:27:20 | INFO     | STDOUT |        /‾\   IIME: In silico Interface Mutagenesis Experiment tool
+2025-10-14 21:27:20 | INFO     | STDOUT |       | O |  Developed by M. Jukič, S. Kralj
+2025-10-14 21:27:20 | INFO     | STDOUT |        \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics
+2025-10-14 21:27:20 | INFO     | STDOUT |              UP FAMNIT- Jukič Laboratory for Cheminformatics
+2025-10-14 21:27:20 | INFO     | STDOUT |     **************************************************************************************
+2025-10-14 21:27:20 | INFO     | PRINT | 
+    **************************************************************************************
+       /‾\   IIME: In silico Interface Mutagenesis Experiment tool
+      | O |  Developed by M. Jukič, S. Kralj
+       \_/   UM FKKT- Laboratory for Physical Chemistry and Chemical Thermodynamics
+             UP FAMNIT- Jukič Laboratory for Cheminformatics
+    **************************************************************************************
+2025-10-14 21:27:23 | INFO     | root | 2 mutations remain after terminal filtering (in-memory).
+2025-10-14 21:27:23 | INFO     | root | No CGENFF file (skipping ligand preparation).
+2025-10-14 21:27:23 | WARNING  | py.warnings | /home/marko/anaconda3/lib/python3.12/site-packages/Bio/PDB/PDBParser.py:384: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1542
+  warnings.warn(
+
+2025-10-14 21:27:23 | INFO     | PRINT | bomblev -1
+2025-10-14 21:27:23 | INFO     | PRINT | stream charmm_dat/toppar.str
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 3 read card name f.pdb
+2025-10-14 21:27:23 | INFO     | PRINT | read sequ pdb unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | rewind unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | gener prof setup warn first NTER last CTER
+2025-10-14 21:27:23 | INFO     | PRINT | !first sequence number is 1
+2025-10-14 21:27:23 | INFO     | PRINT | read coor pdb unit 3 offset 0
+2025-10-14 21:27:23 | INFO     | PRINT | close unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | !place missing heavy atoms
+2025-10-14 21:27:23 | INFO     | PRINT | ic purge
+2025-10-14 21:27:23 | INFO     | PRINT | ic param
+2025-10-14 21:27:23 | INFO     | PRINT | ic fill preserve
+2025-10-14 21:27:23 | INFO     | PRINT | ic build
+2025-10-14 21:27:23 | INFO     | PRINT | define test sele segid prof .not. type H* .and. .not. init show end
+2025-10-14 21:27:23 | INFO     | PRINT | !naredimo vse koordinate za vodike
+2025-10-14 21:27:23 | INFO     | PRINT | coor init sele type H* end
+2025-10-14 21:27:23 | INFO     | PRINT | hbuild sele type H* end
+2025-10-14 21:27:23 | INFO     | PRINT | define test sele segid prof .not. init show end
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 12 write card name prof.psf
+2025-10-14 21:27:23 | INFO     | PRINT | write psf card unit 12
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 12 write card name prof.crd
+2025-10-14 21:27:23 | INFO     | PRINT | write coor card unit 12
+2025-10-14 21:27:23 | INFO     | PRINT | stop
+2025-10-14 21:27:23 | INFO     | PRINT | bomblev -1
+2025-10-14 21:27:23 | INFO     | PRINT | stream charmm_dat/toppar.str
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 3 read card name c.pdb
+2025-10-14 21:27:23 | INFO     | PRINT | read sequ pdb unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | rewind unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | gener proc setup warn first NTER last CTER
+2025-10-14 21:27:23 | INFO     | PRINT | !first sequence number is 3
+2025-10-14 21:27:23 | INFO     | PRINT | read coor pdb unit 3 offset -2
+2025-10-14 21:27:23 | INFO     | PRINT | close unit 3
+2025-10-14 21:27:23 | INFO     | PRINT | !place missing heavy atoms
+2025-10-14 21:27:23 | INFO     | PRINT | ic purge
+2025-10-14 21:27:23 | INFO     | PRINT | ic param
+2025-10-14 21:27:23 | INFO     | PRINT | ic fill preserve
+2025-10-14 21:27:23 | INFO     | PRINT | ic build
+2025-10-14 21:27:23 | INFO     | PRINT | define test sele segid proc .not. type H* .and. .not. init show end
+2025-10-14 21:27:23 | INFO     | PRINT | !naredimo vse koordinate za vodike
+2025-10-14 21:27:23 | INFO     | PRINT | coor init sele type H* end
+2025-10-14 21:27:23 | INFO     | PRINT | hbuild sele type H* end
+2025-10-14 21:27:23 | INFO     | PRINT | define test sele segid proc .not. init show end
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 12 write card name proc.psf
+2025-10-14 21:27:23 | INFO     | PRINT | write psf card unit 12
+2025-10-14 21:27:23 | INFO     | PRINT | open unit 12 write card name proc.crd
+2025-10-14 21:27:23 | INFO     | PRINT | write coor card unit 12
+2025-10-14 21:27:23 | INFO     | PRINT | stop
+2025-10-14 21:27:23 | INFO     | PRINT | Generating CRD and PSF for chain F
+2025-10-14 21:27:27 | INFO     | PRINT | Generating CRD and PSF for chain C
+2025-10-14 21:27:29 | INFO     | PRINT | stream charmm_dat/toppar.str
+2025-10-14 21:27:29 | INFO     | PRINT | read rtf card append name charmm_dat/all_pmuta.rtf
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to A
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2A PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn ALA sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2A.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2A.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2A.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to R
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2R PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn ARG sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2R.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2R.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2R.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to N
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2N PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn ASN sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2N.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2N.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2N.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to D
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2D PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn ASP sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2D.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2D.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2D.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to C
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2C PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn CYS sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2C.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2C.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2C.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to E
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2E PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn GLU sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2E.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2E.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2E.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to Q
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2Q PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn GLN sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Q.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Q.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Q.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to G
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2G PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn GLY sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2G.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2G.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2G.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to H
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2H PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn HSD sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2H.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2H.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2H.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to I
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2I PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn ILE sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2I.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2I.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2I.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to L
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2L PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn LEU sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2L.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2L.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2L.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to K
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2K PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn LYS sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2K.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2K.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2K.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to M
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2M PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn MET sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2M.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2M.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2M.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to F
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2F PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn PHE sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2F.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2F.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2F.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to P
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2P PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn PRO sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2P.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2P.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2P.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to S
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2S PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn SER sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2S.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2S.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2S.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to T
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2T PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn THR sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2T.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2T.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2T.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to W
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2W PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn TRP sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2W.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2W.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2W.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to Y
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2Y PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn TYR sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Y.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Y.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2Y.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | !mutate to V
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:29 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:29 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:29 | INFO     | PRINT | patch XR2V PROC 59 PROC 58 PROC 60 setup
+2025-10-14 21:27:29 | INFO     | PRINT | ic build
+2025-10-14 21:27:29 | INFO     | PRINT | rena resn VAL sele segi PROC .and. resid 59 end
+2025-10-14 21:27:29 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2V.psf
+2025-10-14 21:27:29 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2V.crd
+2025-10-14 21:27:29 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:29 | INFO     | PRINT | open write unit 11 card name PROC_59_R2V.pdb
+2025-10-14 21:27:29 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:29 | INFO     | PRINT | stop
+2025-10-14 21:27:29 | INFO     | PRINT | Mutating the amino-acid ARG on residue number 59 on chain C
+2025-10-14 21:27:33 | INFO     | PRINT | stream charmm_dat/toppar.str
+2025-10-14 21:27:33 | INFO     | PRINT | read rtf card append name charmm_dat/all_pmuta.rtf
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to A
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2A PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn ALA sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2A.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2A.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2A.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to R
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2R PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn ARG sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2R.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2R.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2R.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to N
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2N PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn ASN sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2N.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2N.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2N.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to D
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2D PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn ASP sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2D.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2D.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2D.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to C
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2C PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn CYS sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2C.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2C.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2C.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to E
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2E PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn GLU sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2E.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2E.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2E.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to Q
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2Q PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn GLN sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Q.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Q.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Q.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to G
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2G PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn GLY sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2G.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2G.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2G.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to H
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2H PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn HSD sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2H.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2H.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2H.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to I
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2I PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn ILE sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2I.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2I.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2I.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to L
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2L PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn LEU sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2L.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2L.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2L.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to K
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2K PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn LYS sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2K.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2K.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2K.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to M
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2M PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn MET sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2M.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2M.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2M.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to F
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2F PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn PHE sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2F.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2F.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2F.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to P
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2P PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn PRO sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2P.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2P.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2P.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to S
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2S PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn SER sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2S.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2S.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2S.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to T
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2T PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn THR sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2T.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2T.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2T.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to W
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2W PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn TRP sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2W.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2W.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2W.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to Y
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2Y PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn TYR sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Y.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Y.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2Y.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | !mutate to V
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.psf
+2025-10-14 21:27:33 | INFO     | PRINT | read psf unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | open read unit 10 card name PROC.crd
+2025-10-14 21:27:33 | INFO     | PRINT | read coor unit 10 card
+2025-10-14 21:27:33 | INFO     | PRINT | patch XE2V PROC 60 PROC 59 PROC 61 setup
+2025-10-14 21:27:33 | INFO     | PRINT | ic build
+2025-10-14 21:27:33 | INFO     | PRINT | rena resn VAL sele segi PROC .and. resid 60 end
+2025-10-14 21:27:33 | INFO     | PRINT | autogenerate angl dihe
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2V.psf
+2025-10-14 21:27:33 | INFO     | PRINT | write psf unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2V.crd
+2025-10-14 21:27:33 | INFO     | PRINT | write coor unit 11 card
+2025-10-14 21:27:33 | INFO     | PRINT | open write unit 11 card name PROC_60_E2V.pdb
+2025-10-14 21:27:33 | INFO     | PRINT | write coor pdb unit 11 official
+2025-10-14 21:27:33 | INFO     | PRINT | stop
+2025-10-14 21:27:33 | INFO     | PRINT | Mutating the amino-acid GLU on residue number 60 on chain C
+2025-10-14 21:27:36 | INFO     | PRINT | *GENERATED BY SEBALAB
+2025-10-14 21:27:36 | INFO     | PRINT | *SMEHeC: Swift Mutational Energy Heatmap Calculator
+2025-10-14 21:27:36 | INFO     | PRINT | *Joining and minimization of chains with mutations
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | stream charmm_dat/toppar.str
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2A.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2A.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2A.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2A.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2A.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2A
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2R.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2R.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2R.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2R.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2R.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2R
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2N.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2N.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2N.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2N.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2N.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2N
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2D.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2D.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2D.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2D.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2D.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2D
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2C.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2C.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2C.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2C.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2C.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2C
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2E.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2E.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2E.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2E.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2E.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2E
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2Q.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2Q.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2Q.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2Q.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2Q.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2Q
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2G.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2G.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2G.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2G.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2G.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2G
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2H.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2H.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2H.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2H.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2H.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2H
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2I.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2I.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2I.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2I.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2I.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2I
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2L.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2L.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2L.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2L.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2L.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2L
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2K.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2K.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2K.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2K.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2K.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2K
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2M.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2M.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2M.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2M.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2M.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2M
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2F.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2F.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2F.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2F.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2F.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2F
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2P.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2P.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2P.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2P.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2P.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2P
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2S.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2S.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2S.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2S.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2S.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2S
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2T.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2T.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2T.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2T.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2T.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2T
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2W.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2W.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2W.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2W.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2W.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2W
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2Y.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2Y.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2Y.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2Y.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2Y.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2Y
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name prof.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name prof.crd
+2025-10-14 21:27:36 | INFO     | PRINT | read psf card append name PROC_59_R2V.psf
+2025-10-14 21:27:36 | INFO     | PRINT | read coor card append name PROC_59_R2V.crd
+2025-10-14 21:27:36 | INFO     | PRINT | !Patch disulfide bonds based on SSBOND info in PDB
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | mini SD nstep 50 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | define msit  sele segid PROC .and. resid 59 end
+2025-10-14 21:27:36 | INFO     | PRINT | cons fix sele .not. ( msit  .around. 10.0 ) end
+2025-10-14 21:27:36 | INFO     | PRINT | mini ABNR nstep 10000 tolgrd 0.05 nprint 50
+2025-10-14 21:27:36 | INFO     | PRINT | 
+cons fix sele none end
+2025-10-14 21:27:36 | INFO     | PRINT | ENERGY atom CDIE eps 1 cutnb 21 ctofnb 18 ctonnb 16 switch vswitch
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 10 card name joined_PROC_59_R2V.psf
+2025-10-14 21:27:36 | INFO     | PRINT | write psf unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2V.crd
+2025-10-14 21:27:36 | INFO     | PRINT | write coor unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | open write card unit 10 card name joined_PROC_59_R2V.pdb
+2025-10-14 21:27:36 | INFO     | PRINT | write coor pdb unit 10 card
+2025-10-14 21:27:36 | INFO     | PRINT | set t PROC_59_R2V
+2025-10-14 21:27:36 | INFO     | PRINT | inte sele segid proc show end sele segid prof show end
+2025-10-14 21:27:36 | INFO     | PRINT | 
+set e1 ?ener
+2025-10-14 21:27:36 | INFO     | PRINT | open write unit 21 form name inter_ener_arg59c.dat append
+2025-10-14 21:27:36 | INFO     | PRINT | write title unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | *@t          @e1
+2025-10-14 21:27:36 | INFO     | PRINT | *
+2025-10-14 21:27:36 | INFO     | PRINT | close unit 21
+2025-10-14 21:27:36 | INFO     | PRINT | delete atom select all end
+2025-10-14 21:27:36 | INFO     | PRINT | stop
+2025-10-14 21:27:36 | INFO     | PRINT | Perfroming minimization for mutation ARG C 59
+2025-10-14 21:27:39 | INFO     | PRINT | Calculating progress: 0/20
+2025-10-14 21:27:40 | INFO     | PRINT | Calculating progress: 0/20
+2025-10-14 21:27:41 | INFO     | PRINT | Calculating progress: 0/20
+2025-10-14 21:27:42 | INFO     | PRINT | Calculating progress: 1/20
+2025-10-14 21:27:43 | INFO     | PRINT | Calculating progress: 1/20
+2025-10-14 21:27:44 | INFO     | PRINT | Calculating progress: 1/20
+2025-10-14 21:27:45 | INFO     | PRINT | Calculating progress: 1/20
+2025-10-14 21:27:46 | INFO     | PRINT | Calculating progress: 2/20
+2025-10-14 21:27:47 | INFO     | PRINT | Calculating progress: 2/20
+2025-10-14 21:27:48 | INFO     | PRINT | Calculating progress: 2/20
+2025-10-14 21:27:49 | INFO     | PRINT | Calculating progress: 2/20
+2025-10-14 21:27:50 | INFO     | PRINT | Calculating progress: 3/20
+2025-10-14 21:27:51 | INFO     | PRINT | Calculating progress: 3/20
+2025-10-14 21:27:52 | INFO     | PRINT | Calculating progress: 3/20
+2025-10-14 21:27:53 | INFO     | PRINT | Calculating progress: 4/20
+2025-10-14 21:27:54 | INFO     | PRINT | Calculating progress: 4/20
+2025-10-14 21:27:55 | INFO     | PRINT | Calculating progress: 4/20
+2025-10-14 21:27:56 | INFO     | PRINT | Calculating progress: 4/20
+2025-10-14 21:27:57 | INFO     | PRINT | Calculating progress: 5/20
+2025-10-14 21:27:58 | INFO     | PRINT | Calculating progress: 5/20
+2025-10-14 21:27:59 | INFO     | PRINT | Calculating progress: 5/20
+2025-10-14 21:28:00 | INFO     | PRINT | Calculating progress: 6/20
+2025-10-14 21:28:01 | INFO     | PRINT | Calculating progress: 6/20
+2025-10-14 21:28:02 | INFO     | PRINT | Calculating progress: 6/20
+2025-10-14 21:28:03 | INFO     | PRINT | Calculating progress: 6/20
+2025-10-14 21:28:04 | INFO     | PRINT | Calculating progress: 7/20
+2025-10-14 21:28:05 | INFO     | PRINT | Calculating progress: 7/20
+2025-10-14 21:28:06 | INFO     | PRINT | Calculating progress: 7/20
+2025-10-14 21:28:07 | INFO     | PRINT | Calculating progress: 7/20
+2025-10-14 21:28:08 | INFO     | PRINT | Calculating progress: 8/20
+2025-10-14 21:28:09 | INFO     | PRINT | Calculating progress: 8/20
+2025-10-14 21:28:10 | INFO     | PRINT | Calculating progress: 8/20
+2025-10-14 21:28:11 | INFO     | PRINT | Calculating progress: 8/20
+2025-10-14 21:28:12 | INFO     | PRINT | Calculating progress: 9/20
+2025-10-14 21:28:13 | INFO     | PRINT | Calculating progress: 9/20
+2025-10-14 21:28:14 | INFO     | PRINT | Calculating progress: 9/20
+2025-10-14 21:28:15 | INFO     | PRINT | Calculating progress: 9/20
+2025-10-14 21:28:16 | INFO     | PRINT | Calculating progress: 10/20
+2025-10-14 21:28:17 | INFO     | PRINT | Calculating progress: 10/20
+2025-10-14 21:28:18 | INFO     | PRINT | Calculating progress: 10/20
+2025-10-14 21:28:19 | INFO     | PRINT | Calculating progress: 10/20
+2025-10-14 21:28:20 | INFO     | PRINT | Calculating progress: 10/20
+2025-10-14 21:28:21 | INFO     | PRINT | Calculating progress: 11/20
+2025-10-14 21:28:22 | INFO     | PRINT | Calculating progress: 11/20
+2025-10-14 21:28:23 | INFO     | PRINT | Calculating progress: 11/20
+2025-10-14 21:28:24 | INFO     | PRINT | Calculating progress: 11/20
+2025-10-14 21:28:25 | INFO     | PRINT | Calculating progress: 12/20
+2025-10-14 21:28:26 | INFO     | PRINT | Calculating progress: 12/20
+2025-10-14 21:28:27 | INFO     | PRINT | Calculating progress: 12/20
+2025-10-14 21:28:28 | INFO     | PRINT | Calculating progress: 12/20
+2025-10-14 21:28:29 | INFO     | PRINT | Calculating progress: 12/20
+2025-10-14 21:28:30 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:31 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:32 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:33 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:34 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:35 | INFO     | PRINT | Calculating progress: 13/20
+2025-10-14 21:28:36 | INFO     | PRINT | Calculating progress: 14/20
+2025-10-14 21:28:37 | INFO     | PRINT | Calculating progress: 14/20
+2025-10-14 21:28:38 | INFO     | PRINT | Calculating progress: 14/20
+2025-10-14 21:28:39 | INFO     | PRINT | Calculating progress: 14/20
+2025-10-14 21:28:40 | INFO     | PRINT | Calculating progress: 15/20
+2025-10-14 21:28:41 | INFO     | PRINT | Calculating progress: 15/20
+2025-10-14 21:28:42 | INFO     | PRINT | Calculating progress: 15/20
+2025-10-14 21:28:43 | INFO     | PRINT | Calculating progress: 16/20
+2025-10-14 21:28:44 | INFO     | PRINT | Calculating progress: 16/20
+2025-10-14 21:28:45 | INFO     | PRINT | Calculating progress: 16/20
+2025-10-14 21:28:46 | INFO     | PRINT | Calculating progress: 16/20
+2025-10-14 21:28:47 | INFO     | PRINT | Calculating progress: 16/20
+2025-10-14 21:28:48 | INFO     | PRINT | Calculating progress: 17/20
+2025-10-14 21:28:49 | INFO     | PRINT | Calculating progress: 17/20
+2025-10-14 21:28:50 | INFO     | PRINT | Traceback (most recent call last):
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT | KeyboardInterrupt
+2025-10-14 21:28:50 | INFO     | PRINT | 
+During handling of the above exception, another exception occurred:
+2025-10-14 21:28:50 | INFO     | PRINT | Traceback (most recent call last):
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 380, in <module>
+    main()
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 363, in main
+    do_step3_inte(final_muts, params)
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 229, in do_step3_inte
+    s3.create_step3_inte_input(); s3.run_step3()
+                                  ^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/step3_inte.py", line 210, in run_step3
+    result = subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1201, in communicate
+    self.wait()
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1277, in wait
+    self._wait(timeout=sigint_timeout)
+2025-10-14 21:28:50 | INFO     | PRINT |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2045, in _wait
+    time.sleep(delay)
+2025-10-14 21:28:50 | INFO     | PRINT | KeyboardInterrupt
+2025-10-14 21:28:50 | ERROR    | FATAL | Uncaught exception
+Traceback (most recent call last):
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 380, in <module>
+    main()
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 363, in main
+    do_step3_inte(final_muts, params)
+  File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 229, in do_step3_inte
+    s3.create_step3_inte_input(); s3.run_step3()
+                                  ^^^^^^^^^^^^^^
+  File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/step3_inte.py", line 210, in run_step3
+    result = subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1201, in communicate
+    self.wait()
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1277, in wait
+    self._wait(timeout=sigint_timeout)
+  File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2045, in _wait
+    time.sleep(delay)
+KeyboardInterrupt
+2025-10-14 21:28:50 | ERROR    | STDERR | Traceback (most recent call last):
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+2025-10-14 21:28:50 | ERROR    | STDERR |     return self._wait(timeout=timeout)
+2025-10-14 21:28:50 | ERROR    | STDERR |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+2025-10-14 21:28:50 | ERROR    | STDERR |     (pid, sts) = self._try_wait(0)
+2025-10-14 21:28:50 | ERROR    | STDERR |                  ^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+2025-10-14 21:28:50 | ERROR    | STDERR |     (pid, sts) = os.waitpid(self.pid, wait_flags)
+2025-10-14 21:28:50 | ERROR    | STDERR |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR | KeyboardInterrupt
+2025-10-14 21:28:50 | ERROR    | STDERR | During handling of the above exception, another exception occurred:
+2025-10-14 21:28:50 | ERROR    | STDERR | Traceback (most recent call last):
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 380, in <module>
+2025-10-14 21:28:50 | ERROR    | STDERR |     main()
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 363, in main
+2025-10-14 21:28:50 | ERROR    | STDERR |     do_step3_inte(final_muts, params)
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/IIME.py", line 229, in do_step3_inte
+2025-10-14 21:28:50 | ERROR    | STDERR |     s3.create_step3_inte_input(); s3.run_step3()
+2025-10-14 21:28:50 | ERROR    | STDERR |                                   ^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/PROJECTS/SMEHEC/smehec/scripts/step3_inte.py", line 210, in run_step3
+2025-10-14 21:28:50 | ERROR    | STDERR |     result = subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+2025-10-14 21:28:50 | ERROR    | STDERR |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 550, in run
+2025-10-14 21:28:50 | ERROR    | STDERR |     stdout, stderr = process.communicate(input, timeout=timeout)
+2025-10-14 21:28:50 | ERROR    | STDERR |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1201, in communicate
+2025-10-14 21:28:50 | ERROR    | STDERR |     self.wait()
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 1277, in wait
+2025-10-14 21:28:50 | ERROR    | STDERR |     self._wait(timeout=sigint_timeout)
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/subprocess.py", line 2045, in _wait
+2025-10-14 21:28:50 | ERROR    | STDERR |     time.sleep(delay)
+2025-10-14 21:28:50 | ERROR    | STDERR | KeyboardInterrupt
+2025-10-14 21:28:50 | ERROR    | STDERR | Exception ignored in: <module 'threading' from '/home/marko/anaconda3/lib/python3.12/threading.py'>
+2025-10-14 21:28:50 | ERROR    | STDERR | Traceback (most recent call last):
+2025-10-14 21:28:50 | ERROR    | STDERR |   File "/home/marko/anaconda3/lib/python3.12/threading.py", line 1622, in _shutdown
+2025-10-14 21:28:50 | ERROR    | STDERR |     lock.acquire()
+2025-10-14 21:28:50 | ERROR    | STDERR | KeyboardInterrupt:

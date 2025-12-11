@@ -1,0 +1,7 @@
+
+# Charmm directory to execute generated input and thread number
+
+CHARMM_DIRECTORY /home/marko/PROJECTS/SMEHEC/smehec/charmm_program/charmm/bin/charmm
+
+
+
