@@ -1,9 +1,9 @@
 import os
 import uuid
+import shutil
 import zipfile
 import subprocess
 from flask_cors import CORS
-from collections import deque
 from flask import Flask, Response, request, jsonify, send_file, abort
 
 app = Flask(__name__) # Flask constructor.
@@ -21,6 +21,24 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 @app.route('/run-script', methods=['POST'])
 def run_script():
+
+    # Delete uploaded PDBs and ZIP files
+    for f in os.listdir(BASE_DIR):
+        if f.startswith("job_") and (f.endswith(".pdb") or f.endswith("_results.zip")):
+            try:
+                os.remove(os.path.join(BASE_DIR, f))
+            except:
+                pass
+
+    # Delete ALL extracted result folders from previous jobs
+    for folder in os.listdir(OUTPUT_FOLDER):
+        folder_path = os.path.join(OUTPUT_FOLDER, folder)
+        if os.path.isdir(folder_path):
+            try:
+                shutil.rmtree(folder_path, ignore_errors=True)
+            except:
+                pass
+
     try:
         pdb_file = request.files.get('pdb_file')
         if not pdb_file:
@@ -29,7 +47,7 @@ def run_script():
         protein_chains = request.form.get('protein_chains', '').strip()
         partner_chains = request.form.get('partner_chains', '').strip()
         mutations = request.form.get('mutations', '').strip()
-        detect_interface = request.form.get('detect_interface', 'false') == 'true'
+        # detect_interface = request.form.get('detect_interface', 'false') == 'true'
 
         job_id = str(uuid.uuid4())[:8]
         job_prefix = f"job_{job_id}"
@@ -41,7 +59,7 @@ def run_script():
         container_name = f"iime_{job_id}"
 
         docker_cmd = [
-            "docker", "run", "-d", "--rm", "--name", container_name,
+            "docker", "run", "-d", "--name", container_name,
             "-v", f"{BASE_DIR}:/IIME",
             "-w", "/IIME",
             "iime_env_full",
@@ -54,15 +72,15 @@ def run_script():
             "--threads", "4"
         ]
 
-        if mutations and detect_interface:
-            return jsonify({
-                "error": "Mutations and Detect Interface are mutually exclusive. Please select only one."
-            }), 400
+        # if mutations and detect_interface:
+        #     return jsonify({
+        #         "error": "Mutations and Detect Interface are mutually exclusive. Please select only one."
+        #     }), 400
 
         if mutations:
             docker_cmd += ["--mutations", mutations]
-        elif detect_interface:
-            docker_cmd += ["--cutoff", "5.0"]
+        # elif detect_interface:
+        #     docker_cmd += ["--cutoff", "5.0"]
 
         subprocess.Popen(docker_cmd, cwd=BASE_DIR)
         return jsonify({"status": "processing", "job_id": job_id})
