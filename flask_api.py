@@ -8,7 +8,15 @@ from flask_cors import CORS
 from flask import Flask, Response, request, jsonify, send_file, abort
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(
+    app,
+    resources={r"/*": {
+        "origins": [
+            "http://212.235.192.125:3000",
+            "http://localhost:3000"
+        ]
+    }}
+)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -164,4 +172,4 @@ if __name__ == '__main__':
     Using 0.0.0.0 exposes your app to the entire network or internet (Any computer that can reach servers IP)
     Refer to the following link for more: https://stackoverflow.com/questions/7023052/configure-flask-dev-server-to-be-visible-across-the-network
     '''
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=3001)
