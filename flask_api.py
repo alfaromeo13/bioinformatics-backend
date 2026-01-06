@@ -3,10 +3,17 @@ import uuid
 import shutil
 import zipfile
 import subprocess
+from flask_cors import CORS
 from collections import deque
 from flask import Flask, Response, request, jsonify, send_file, abort
 
 app = Flask(__name__)
+
+CORS(
+    app,
+    supports_credentials=True,
+    resources={r"/*": {"origins": "*"}}
+)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FOLDER = os.path.join(BASE_DIR, 'outputs')
