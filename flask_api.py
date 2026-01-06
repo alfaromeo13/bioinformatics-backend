@@ -36,6 +36,13 @@ def tail_file(path, lines=10):
         return "[Log file not found]"
 
 
+
+@app.before_request
+def handle_options():
+    if request.method == "OPTIONS":
+        return "", 200
+
+
 @app.route('/run-script', methods=['POST'])
 def run_script():
 
