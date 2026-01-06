@@ -4,20 +4,9 @@ import shutil
 import zipfile
 import subprocess
 from collections import deque
-from flask_cors import CORS
 from flask import Flask, Response, request, jsonify, send_file, abort
 
 app = Flask(__name__)
-CORS(
-    app,
-    resources={r"/*": {
-        "origins": [
-            "http://212.235.192.125:3000",
-            "http://localhost:3000"
-        ]
-    }}
-)
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FOLDER = os.path.join(BASE_DIR, 'outputs')
