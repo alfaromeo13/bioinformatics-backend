@@ -1,11 +1,21 @@
 import os
+import sys
 import uuid
 import shutil
 import zipfile
+import logging
 import subprocess
 from flask_cors import CORS
 from collections import deque
 from flask import Flask, Response, request, jsonify, send_file, abort
+
+# Configure logging to stdout for PM2
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
@@ -45,6 +55,7 @@ def handle_options():
 
 @app.route('/run-script', methods=['POST'])
 def run_script():
+    logger.info("Received /run-script request")
 
     # Cleanup old outputs
     for folder in os.listdir(OUTPUT_FOLDER):
@@ -53,6 +64,7 @@ def run_script():
     try:
         pdb_file = request.files.get('pdb_file')
         if not pdb_file:
+            logger.error("PDB file is required but not provided")
             return jsonify({"error": "PDB file is required"}), 400
 
         protein_chains = request.form.get('protein_chains', '').strip()
@@ -62,6 +74,8 @@ def run_script():
         job_id = str(uuid.uuid4())[:8]
         job_prefix = f"job_{job_id}"
 
+        logger.info(f"Starting job {job_id}: pdb={pdb_file.filename}, protein_chains={protein_chains}, partner_chains={partner_chains}, mutations={mutations}")
+
         pdb_name = f"{job_prefix}_{pdb_file.filename}"
         pdb_path = os.path.join(BASE_DIR, pdb_name)
         pdb_file.save(pdb_path)
@@ -70,6 +84,7 @@ def run_script():
 
         cmd = [
             "python3", "IIME.py",
+            "--charmm-dir", os.path.join(BASE_DIR, "charmm_program", "charmm", "bin", "charmm"),
             "--pdb", pdb_name,
             "--protein-chains", protein_chains,
             "--partner-chains", partner_chains,
@@ -79,6 +94,8 @@ def run_script():
 
         if mutations:
             cmd += ["--mutations", mutations]
+
+        logger.info(f"Running command: {' '.join(cmd)}")
 
         log_file = open(log_path, "w")
 
@@ -98,6 +115,7 @@ def run_script():
         return jsonify({"status": "processing", "job_id": job_id})
 
     except Exception as e:
+        logger.exception(f"Error in /run-script: {e}")
         return jsonify({"error": str(e)}), 500
 
 
@@ -115,39 +133,53 @@ def get_log(job_id):
 
     # If process finished → cleanup
     if proc.poll() is not None:
+        exit_code = proc.returncode
         job["log_file"].close()
         RUNNING_JOBS.pop(job_id, None)
+
+        if exit_code != 0:
+            logger.error(f"Job {job_id} failed with exit code {exit_code}")
+            logger.error(f"Last log output:\n{log_content}")
+        else:
+            logger.info(f"Job {job_id} completed successfully")
 
         try:
             os.remove(log_path)
         except:
             pass
 
-        log_content += "\n[Job finished, log deleted]"
+        log_content += f"\n[Job finished with exit code {exit_code}, log deleted]"
 
     return jsonify({"log": log_content}), 200
 
 
 @app.route('/check-result/<job_id>', methods=['GET'])
 def check_result(job_id):
-    zips = [f for f in os.listdir(BASE_DIR) if f.endswith('_results.zip') and job_id in f]
-    if not zips:
-        return jsonify({"status": "pending"}), 202
+    try:
+        zips = [f for f in os.listdir(BASE_DIR) if f.endswith('_results.zip') and job_id in f]
+        if not zips:
+            return jsonify({"status": "pending"}), 202
 
-    zip_path = os.path.join(BASE_DIR, zips[0])
-    extract_dir = os.path.join(OUTPUT_FOLDER, job_id)
+        logger.info(f"Found results for job {job_id}: {zips[0]}")
 
-    if not os.path.exists(extract_dir):
-        os.makedirs(extract_dir, exist_ok=True)
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            zip_ref.extractall(extract_dir)
+        zip_path = os.path.join(BASE_DIR, zips[0])
+        extract_dir = os.path.join(OUTPUT_FOLDER, job_id)
 
-    files = []
-    for root, _, filenames in os.walk(extract_dir):
-        for fname in filenames:
-            files.append(os.path.relpath(os.path.join(root, fname), extract_dir))
+        if not os.path.exists(extract_dir):
+            os.makedirs(extract_dir, exist_ok=True)
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(extract_dir)
 
-    return jsonify({"status": "completed", "files": files})
+        files = []
+        for root, _, filenames in os.walk(extract_dir):
+            for fname in filenames:
+                files.append(os.path.relpath(os.path.join(root, fname), extract_dir))
+
+        logger.info(f"Job {job_id} completed with {len(files)} result files")
+        return jsonify({"status": "completed", "files": files})
+    except Exception as e:
+        logger.exception(f"Error checking result for job {job_id}: {e}")
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/get-file/<job_id>/<path:filename>', methods=['GET'])
@@ -175,4 +207,4 @@ if __name__ == '__main__':
     Using 0.0.0.0 exposes your app to the entire network or internet (Any computer that can reach servers IP)
     Refer to the following link for more: https://stackoverflow.com/questions/7023052/configure-flask-dev-server-to-be-visible-across-the-network
     '''
-    app.run(host='0.0.0.0', port=3001)
+    app.run(host='0.0.0.0', port=5000)

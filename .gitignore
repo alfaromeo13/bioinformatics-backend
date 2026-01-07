@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+
+# Job files (uploaded PDB files)
+job_*.pdb
+*_results.zip
+
+# Generated PDB files
+*.pdb
+
+# Generated CHARMM files
+*.crd
+*.psf
+*.inp
+*.out
+fort.*
+
+# Logs
+logs/
+runs/
+
+# Outputs
+outputs/
+

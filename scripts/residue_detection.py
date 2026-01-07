@@ -69,16 +69,21 @@ class ResidueDetector:
 
     #Funkcija preveri mutacije in izbriše duplikate
     def check_mutations(self):
-        with open(self.setup_file, 'r') as file:
-            lines = file.readlines()
+        # If no setup file, use detected_residues from detect_distances()
+        if self.setup_file is None:
+            # Extract just the protein residue part (first part before space)
+            mutations = [res.split()[0] for res in self.detected_residues]
+        else:
+            with open(self.setup_file, 'r') as file:
+                lines = file.readlines()
 
-        #Ekstrakcija iz mutation_lista
-        mutations = []
-        for line in lines:
-            if line.startswith('MUTATION_LIST'):
-                mutation_entries = line.split()[1:]
-                for mutation in mutation_entries:
-                    mutations.append(mutation)
+            #Ekstrakcija iz mutation_lista
+            mutations = []
+            for line in lines:
+                if line.startswith('MUTATION_LIST'):
+                    mutation_entries = line.split()[1:]
+                    for mutation in mutation_entries:
+                        mutations.append(mutation)
 
         #Odstranitev duplikatov
         unique_mutations = []
@@ -106,18 +111,23 @@ class ResidueDetector:
 
         sorted_mutations = sorted(filtered_valid_mutations, key=sort_key)
 
-        #Generacija nove liste mutacij
-        new_mutation_list_line = 'MUTATION_LIST ' + ' '.join(sorted_mutations) + '\n'
+        # Store detected mutations for CLI-only mode
+        self.detected_mutations = sorted_mutations
 
-        #Menjava stare liste mutacij z novo urejeno listo
-        new_lines = []
-        for line in lines:
-            if line.startswith('MUTATION_LIST'):
-                new_lines.append(new_mutation_list_line)
-            else:
-                new_lines.append(line)
-        with open(self.setup_file, 'w') as file:
-            file.writelines(new_lines)
+        # Only write to file if setup_file exists
+        if self.setup_file is not None:
+            #Generacija nove liste mutacij
+            new_mutation_list_line = 'MUTATION_LIST ' + ' '.join(sorted_mutations) + '\n'
+
+            #Menjava stare liste mutacij z novo urejeno listo
+            new_lines = []
+            for line in lines:
+                if line.startswith('MUTATION_LIST'):
+                    new_lines.append(new_mutation_list_line)
+                else:
+                    new_lines.append(line)
+            with open(self.setup_file, 'w') as file:
+                file.writelines(new_lines)
 
 
 

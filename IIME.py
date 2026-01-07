@@ -261,8 +261,8 @@ def main():
 
     pdb_path = Path(args.pdb); ensure_exists(pdb_path, "PDB file")
     charmm_dir = args.charmm_dir  # CLI-only
-    protein_chains = [c.strip() for c in re.split(r"[,\s]+", args.protein_chains) if c.strip()]
-    partner_chains = [c.strip() for c in re.split(r"[,\s]+", args.partner_chains) if c.strip()]
+    protein_chains = [c.strip().upper() for c in re.split(r"[,\s]+", args.protein_chains) if c.strip()]
+    partner_chains = [c.strip().upper() for c in re.split(r"[,\s]+", args.partner_chains) if c.strip()]
     if not protein_chains or not partner_chains:
         raise ValueError("Both --protein-chains and --partner-chains must be non-empty.")
 
